@@ -40,7 +40,7 @@ data_trans |>
   gt::gt(rowname_col = "Statistic", groupname_col = "admin.name") |>
   gt::fmt_number(
     columns = c("2025", "2026", "2027", "2028", "2029", "2030"),
-    decimals = 1
+    decimals = 3
   ) |>
   gt::tab_header(
     title = "Projected Population Exposure by Region (2025–2030)",
@@ -49,16 +49,10 @@ data_trans |>
   gt::tab_stubhead(label = "Region / Statistic") |>
   gt::cols_nanoplot(
     columns = c("2025", "2026", "2027", "2028", "2029", "2030"),
-    plot_type = "bar",
+    #plot_type = "line",
     autohide = FALSE,
     new_col_name = "Trend",
-    new_col_label = "Trend",
-    options = nanoplot_options(
-      show_data_line = FALSE,
-      show_data_area = FALSE,
-      data_bar_stroke_color = "transparent",
-      data_bar_fill_color = c("brown", "gold", "purple", "green")
-    )
+    new_col_label = "Trend"
   ) 
 
 
