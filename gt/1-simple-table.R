@@ -52,7 +52,7 @@ data_trans |>
     #plot_type = "line",
     autohide = FALSE,
     new_col_name = "Trend",
-    new_col_label = "Trend"
+    new_col_label = "Trend" 
   ) 
 
 
